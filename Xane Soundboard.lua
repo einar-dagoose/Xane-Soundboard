@@ -48,7 +48,7 @@ local Soundboard = {
     HandleTimers = function(self)
 
         if (self.shouldPlay) then
-            self:PlaySound(self.soundfiles[math.random(2, 12)], true)
+            self:PlaySound(self.soundfiles[math.random(1, 12)], true)
             self.shouldPlay = false
         end
 
@@ -109,5 +109,5 @@ callbacks.Register('FireGameEvent', function(Event)
     end
 end)
 
-local Button = gui.Button(gui.Reference('Misc', 'General', 'Extra'), 'Play Random Xane Sound', function() Soundboard:PlaySound(Soundboard.soundfiles[math.random(2, 12)], true) end)
+local Button = gui.Button(gui.Reference('Misc', 'General', 'Extra'), 'Play Random Xane Sound', function() Soundboard:PlaySound(Soundboard.soundfiles[math.random(1, 12)], true) end)
 Button:SetWidth(248+16)
